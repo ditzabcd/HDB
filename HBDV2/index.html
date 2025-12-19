@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ulang Tahun Sahila</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Intro Cinematic -->
+    <div id="intro" class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1 class="intro-title">Sahila</h1>
+                <p class="intro-subtitle">5 Juli 2011</p>
+            </div>
+            <div class="intro-countdown">
+                <p>Memuat keajaiban...</p>
+                <div class="countdown-bar">
+                    <div class="countdown-progress"></div>
+                </div>
+            </div>
+        </div>
+        <canvas id="introCanvas" class="intro-canvas"></canvas>
+    </div>
+
+    <!-- Halaman Unlock -->
+    <div id="unlockPage" class="page hidden">
+        <div class="unlock-container">
+            <div class="unlock-header">
+                <h2><i class="fas fa-lock"></i> Akses Khusus</h2>
+                <p>Masukkan username untuk membuka kejutan</p>
+            </div>
+            <div class="unlock-form">
+                <input type="text" id="usernameInput" placeholder="Masukkan username di sini...">
+                <button id="unlockButton"><i class="fas fa-key"></i> Buka Kejutan</button>
+                <p class="hint">Hint: nama penerima kejutan ini</p>
+            </div>
+            <div class="unlock-error" id="unlockError"></div>
+            <div class="unlock-footer">
+                <p>✨ Website ini dibuat khusus untuk Sahila ✨</p>
+            </div>
+        </div>
+        <canvas id="unlockCanvas" class="unlock-canvas"></canvas>
+    </div>
+
+    <!-- Halaman Utama -->
+    <div id="mainPage" class="page hidden">
+        <!-- Header dengan navigasi -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1><i class="fas fa-birthday-cake"></i> Happy Birthday, Sahila!</h1>
+                <p class="birthday-date">5 Juli 2011</p>
+                <nav class="main-nav">
+                    <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> Home</button>
+                    <button class="nav-btn" data-page="gallery"><i class="fas fa-images"></i> Gallery</button>
+                    <button class="nav-btn" data-page="letter"><i class="fas fa-envelope"></i> Surat</button>
+                    <button class="nav-btn" data-page="playlist"><i class="fas fa-music"></i> Playlist</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Konten Halaman -->
+        <main class="main-content">
+            <!-- Halaman Home -->
+            <section id="homePage" class="content-section active">
+                <div class="welcome-container">
+                    <div class="welcome-text">
+                        <h2><i class="fas fa-star"></i> Selamat Ulang Tahun!</h2>
+                        <p>Hari ini adalah hari spesial untuk orang yang sangat spesial! Semoga semua harapan dan impianmu menjadi kenyataan. Teruslah bersinar seperti bintang yang selalu menerangi kegelapan.</p>
+                        <div class="birthday-wish">
+                            <p><i class="fas fa-heart"></i> Semoga panjang umur, sehat selalu, dan jangan lupa untuk selalu beribadah! <i class="fas fa-heart"></i></p>
+                        </div>
+                    </div>
+                    <div class="welcome-image">
+                        <div class="image-frame">
+                            <!-- WELCOME IMAGE - TETAP ADA -->
+                            <img src="https://files.catbox.moe/8z1gg6.jpg" alt="Ulang Tahun" class="birthday-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Galeri Foto</h3>
+                        <p>Lihat momen-momen indah dalam galeri khusus.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Playlist Musik</h3>
+                        <p>Dengarkan lagu-lagu spesial untuk hari spesialmu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3>Surat Rahasia</h3>
+                        <p>Baca pesan khusus yang penuh makna.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <h3>Efek Spesial</h3>
+                        <p>Nikmati keindahan partikel dan efek visual.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Halaman Gallery -->
+            <section id="galleryPage" class="content-section">
+                <div class="gallery-header">
+                    <h2><i class="fas fa-images"></i> Galeri Spesial</h2>
+                    <p>Kenangan indah yang akan selalu dikenang</p>
+                </div>
+                <div class="gallery-grid">
+                    <!-- FOTO 1-4 - KOSONGKAN (akan diisi oleh gallery.js) -->
+                    <!-- gallery.js akan isi: Lucuu, Lucu jugaa, XIXI, Lucu semua woi -->
+                </div>
+                
+                <div class="food-gallery">
+                    <h3><i class="fas fa-utensils"></i> Makanan Favorit</h3>
+                    <div class="food-grid">
+                        <!-- MAKANAN 1-4 - KOSONGKAN (akan diisi oleh gallery.js) -->
+                        <!-- gallery.js akan isi: Coklatttt, Mie Ayam, Ice cream xiixix, Seblak apcb -->
+                    </div>
+                </div>
+                
+                <div class="gallery-note">
+                    <p><i class="fas fa-info-circle"></i> <strong>Catatan Developer:</strong> Semua foto diatur dalam file gallery.js</p>
+                </div>
+            </section>
+
+            <!-- Halaman Surat -->
+            <section id="letterPage" class="content-section">
+                <div class="letter-container">
+                    <div class="letter-header">
+                        <h2><i class="fas fa-envelope"></i> Surat Rahasia</h2>
+                        <p>Sebuah pesan khusus untuk Sahila</p>
+                    </div>
+                    <div class="letter-content">
+                        <div class="letter-paper">
+                            <div class="letter-text">
+                                <p class="letter-date">5 Juli 2023</p>
+                                <p class="letter-greeting">Untuk Sahila yang tersayang,</p>
+                                
+                                <p>Di hari ulang tahunmu yang spesial ini, aku ingin mengucapkan selamat ulang tahun yang penuh kebahagiaan! Semoga setiap harimu diwarnai dengan tawa, cinta, dan keberkahan yang tak terhingga.</p>
+                                
+                                <p>Semoga panjang umur, sehat selalu, dan jangan lupa untuk selalu beribadah dengan tekun. Jadilah pribadi yang lebih baik setiap harinya, dan teruslah menggapai semua impianmu.</p>
+                                
+                                <p>Ingatlah bahwa kamu adalah orang yang sangat istimewa dan berharga. Teruslah bersinar dengan caramu sendiri, karena dunia membutuhkan cahaya yang kamu miliki.</p>
+                                
+                                <p>Semoga di usia barimu ini, kamu mendapatkan lebih banyak kebahagiaan, kesuksesan, dan pengalaman berharga. Jadilah versi terbaik dari dirimu sendiri!</p>
+                                
+                                <p class="letter-closing">Dengan penuh kasih sayang,<br>
+                                <span class="letter-signature">Teman yang selalu menyayangimu</span></p>
+                            </div>
+                            <div class="letter-decoration">
+                                <div class="decoration-heart"><i class="fas fa-heart"></i></div>
+                                <div class="decoration-flower"><i class="fas fa-star"></i></div>
+                                <div class="decoration-sparkle"><i class="fas fa-sparkles"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letter-note">
+                        <p><i class="fas fa-lock"></i> Surat ini hanya dapat dibaca oleh Sahila setelah membuka kunci dengan username.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Halaman Playlist -->
+            <section id="playlistPage" class="content-section">
+                <div class="playlist-container">
+                    <div class="playlist-header">
+                        <h2><i class="fas fa-music"></i> Playlist Spesial</h2>
+                        <p>Lagu-lagu pilihan untuk menemani hari spesialmu</p>
+                        <div class="music-controls">
+                            <button id="playAllBtn"><i class="fas fa-play"></i> Putar Semua</button>
+                            <button id="pauseAllBtn"><i class="fas fa-pause"></i> Jeda Semua</button>
+                            <button id="shuffleBtn"><i class="fas fa-random"></i> Acak</button>
+                        </div>
+                    </div>
+                    <div class="playlist-songs">
+                        <!-- LAGU 1 - Kosongkan data-audio -->
+                        <div class="song-card" data-audio="">
+                            <div class="song-info">
+                                <div class="song-number">1</div>
+                                <div class="song-details">
+                                    <h4>Abadi</h4>
+                                    <p>-Dendi Nata</p>
+                                </div>
+                            </div>
+                            <button class="song-play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- LAGU 2 - Kosongkan data-audio -->
+                        <div class="song-card" data-audio="">
+                            <div class="song-info">
+                                <div class="song-number">2</div>
+                                <div class="song-details">
+                                    <h4>Cinta sejati</h4>
+                                    <p>-Bunga citra Lestari</p>
+                                </div>
+                            </div>
+                            <button class="song-play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- LAGU 3 - Kosongkan data-audio -->
+                        <div class="song-card" data-audio="">
+                            <div class="song-info">
+                                <div class="song-number">3</div>
+                                <div class="song-details">
+                                    <h4>Everything U Are</h4>
+                                    <p>-Hindia</p>
+                                </div>
+                            </div>
+                            <button class="song-play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- LAGU 4 - Kosongkan data-audio -->
+                        <div class="song-card" data-audio="">
+                            <div class="song-info">
+                                <div class="song-number">4</div>
+                                <div class="song-details">
+                                    <h4>WildFlower</h4>
+                                    <p>-Bile Elis</p>
+                                </div>
+                            </div>
+                            <button class="song-play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- LAGU 5 - Kosongkan data-audio -->
+                        <div class="song-card" data-audio="">
+                            <div class="song-info">
+                                <div class="song-number">5</div>
+                                <div class="song-details">
+                                    <h4>Winer Takes it All</h4>
+                                    <p>-Abba</p>
+                                </div>
+                            </div>
+                            <button class="song-play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="playlist-note">
+                        <p><i class="fas fa-info-circle"></i> <strong>Catatan Developer:</strong> Untuk mengganti lagu, edit array playlist pada file audio.js di source code.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>Dibuat dengan <i class="fas fa-heart"></i> untuk Sahila di ulang tahunnya yang spesial</p>
+            <p class="footer-note">Website ini hanya dapat diedit melalui source code (khusus developer)</p>
+        </footer>
+    </div>
+
+    <!-- Canvas untuk efek partikel -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    
+    <!-- Audio Player - HAPUS ATRIBUT "loop" -->
+    <audio id="backgroundMusic">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="audio.js"></script>
+    <script src="effect.js"></script>
+    <script src="particle.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
